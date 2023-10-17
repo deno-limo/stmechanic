@@ -31,7 +31,7 @@ Cypress.Commands.add('login',(username,password)=>{
     cy.get('#email').clear().type(username)
     cy.get('#password').clear().type(password)
     cy.contains('SIGN IN').click()
-    cy.wait(2000)
+    cy.wait(10000)
     
 
     

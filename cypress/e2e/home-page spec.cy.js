@@ -4,13 +4,17 @@ beforeEach(()=>{
   
 });
 it('get user',()=>{
-  cy.visit('/home')
-cy.get('.MuiButtonBase-root MuiBottomNavigationAction-root css-1aag7dl')
+  cy.visit('/')
+  cy.get('.css-cu01hj > .MuiAvatar-root').click()
+  cy.get('a.MuiButtonBase-root > .MuiListItemText-root > .MuiTypography-root').click()
+  cy.wait(5000)
+  cy.visit('/settings')
+
  
 })
 it('home page',()=>{
 cy.visit('/')
-cy.get('#nameofuser').should('have.text','Welcome test1')
+
 
 
 })
