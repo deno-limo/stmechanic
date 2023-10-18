@@ -1,5 +1,5 @@
 beforeEach(()=>{
-+
+
   cy.login('jthiru01@gmail.com','12345678')
   
 });
