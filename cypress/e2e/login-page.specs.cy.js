@@ -114,7 +114,17 @@
 
       cy.get('a')
         .click()
-
+      
+      cy.get('#email')
+        .type('jthiru01@gmail.com')
+       
+      cy.contains('RESET PASSWORD')
+        .click()
+        .should('have.text','RESET PASSWORD')
+      cy.get('.Toastify__toast-body > :nth-child(2)')
+        .should('have.text','You will receive an email with instructions for how to confirm your email address in a few minutes.')
+        .and('be.visible')
     })
+    
   })
 
